@@ -1,5 +1,3 @@
-import graf_mst
-
 class Node:
     def __init__(self, key_, value_=None):
         self.key = key_
@@ -107,27 +105,6 @@ def Prim(graf, letter):
             v = min_u
 
     return new_graf, edge_sum
-
-
-def printGraph(g):
-    print("------GRAPH------")
-    for v in g.vertices():
-        print(v, end = " -> ")
-        for (n, w) in g.neighbours(v):
-            print(n, w, end=";")
-        print()
-    print("-------------------")
-
-
-G = NeighbourList()
-
-for tuple in graf_mst.graf:
-    ver1 = Node(tuple[0])
-    ver2 = Node(tuple[1])
-    G.insert_vertex(ver1)
-    G.insert_edge(ver1,ver2,tuple[2])
-
-new_G, edge_sum = Prim(G, 'A')
 
 printGraph(new_G)
 
