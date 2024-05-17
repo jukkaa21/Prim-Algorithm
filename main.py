@@ -106,8 +106,3 @@ def Prim(graf, letter):
 
     return new_graf, edge_sum
 
-printGraph(new_G)
-
-# suma krawedzi: 38
-
-
